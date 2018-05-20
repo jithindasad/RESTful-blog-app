@@ -6,7 +6,7 @@ var bodyParser = require("body-parser"),
 //APP CONFIG
 mongoose.connect("mongodb://localhost/restful_blog_app");
 app.set("view engine", "ejs");
-app.set(express.static("public"));
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 //MONGOOSE/MODEL CONFIG
